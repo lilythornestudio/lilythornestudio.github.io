@@ -1,9 +1,13 @@
 
 :root {
 	/* font */
-	--sans: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-	--serif: Iowan Old Style, Times New Roman, Times, serif;
-	--mono: Menlo, Consolas, Monaco, monospace;
+	--sans: "IBM Plex Sans Condensed", Iowan Old Style, Times New Roman, Times, serif;
+	
+	--serif: "Crimson Pro", Iowan Old Style, Times New Roman, Times, serif;
+	--serif: "IBM Plex Serif", Iowan Old Style, Times New Roman, Times, serif;
+
+	--mono: "Courier Prime", Menlo, Consolas, Monaco, monospace;
+	--mono: "IBM Plex Mono", Menlo, Consolas, Monaco, monospace;
 
 	/* z-index */
 	--z-bottom: -100;
@@ -12,9 +16,10 @@
 	--z-overlay: 1000;
 
 	--border-radius: 2px;
-	--color-bg: #fff;
-	--color-primary: #000;
-	--color-fg: #000;
+	--color-bg: #ebe9e2;
+	--color-primary: #3e3929;
+	--color-fg: #3e3929;
+	--col-width: 640px;
 	
 	/* "1" second duration */
 	--1s: 1ms;
@@ -108,22 +113,25 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
 	font-family: var(--sans);
-	font-weight: 400;
+	font-weight: 300;
 	background: var(--color-bg);
 	color: var(--color-fg);
 }
 
 p {
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 1.4;
 	margin: 1rem auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: var(--sans);
+	text-transform: uppercase;
+	font-weight: 200;
 }
 
 h1 {
-	font-size: 48px;
+	font-size: clamp(24px, 7vw, 49px);
 	line-height: 1;
 }
 
@@ -152,12 +160,38 @@ a {
 }
 
 section {
-	max-width: 960px;
+	max-width: var(--col-width);
 	margin: 0 auto;
-	padding: 1rem;
+	padding: 0 1rem;
 }
 
 section > p, section > h2, section > blockquote {
-	max-width: 640px;
 	margin: 1rem auto;
+	text-align: justify;
+}
+
+header {
+	padding: 1rem;
+	max-width: var(--col-width);
+	margin: 1rem auto;
+	text-align: center;
+}
+
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 1rem auto;
+	display: flex;
+	justify-content: center;
+}
+
+li {
+	margin: 0 1rem;
+	text-transform: uppercase;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-primary);
 }
