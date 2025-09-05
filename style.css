@@ -17,9 +17,11 @@
 
 	--border-radius: 2px;
 	--color-bg: #ebe9e2;
-	--color-primary: #3e3929;
+	--color-primary: #bf6142;
+	--color-secondary: #2d6987;
+	--color-tertiary: #deae1f	;
 	--color-fg: #3e3929;
-	--col-width: 640px;
+	--col-width: 540px;
 	
 	/* "1" second duration */
 	--1s: 1ms;
@@ -187,15 +189,37 @@ nav ul {
 	padding: 0;
 	margin: 1rem auto;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+	max-width: var(--col-width);
+	padding: 0 1rem;
 }
 
-li {
-	margin: 0 1rem;
+nav li {
 	text-transform: uppercase;
 }
 
 a {
 	text-decoration: none;
-	color: var(--color-primary);
+	color: var(--color-fg);
+}
+
+#hero p {
+	text-align: center;
+}
+
+#hero img {
+	margin: 2rem auto;
+	border-radius: 16px;
+}
+
+#contact {
+	margin-top: 4rem;
+}
+
+#contact h2 {
+	text-align: center;
+}
+
+#contact p {
+	text-align: center;
 }
