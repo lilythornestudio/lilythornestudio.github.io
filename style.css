@@ -312,3 +312,27 @@ a {
 		width: 50%;
 	}
 }
+
+/* about */
+.about #info {
+	display: flex;
+	margin-top: 4rem;
+	gap: 2rem;
+}
+
+.about #info img {
+	max-width: 280px;
+}
+
+.about #info div {
+}
+
+@media (max-width: 640px) {
+	.about #info {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	
+}
