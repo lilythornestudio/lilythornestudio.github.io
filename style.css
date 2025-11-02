@@ -190,6 +190,10 @@ section > p, section > h2, section > blockquote {
 	margin: 1rem auto;
 }
 
+p.no-margin-top {
+	margin-top: 0;
+}	
+
 header {
 	max-width: var(--col-width);
 	margin: 0 auto;
@@ -322,6 +326,7 @@ a {
 
 .about #info img {
 	max-width: 280px;
+	filter: brightness(0);
 }
 
 .about #info div {
