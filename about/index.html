@@ -1,16 +1,17 @@
 <!doctype html>
-<html lang="en" class="home">
+<html lang="en" class="subpage about">
 
 <head>
-	<title>Lily Thorne Studio</title>
+	<title>Lily Thorne Studio - About</title>
 	<meta name="description" content="Fine woodworking and handmade objects from the Berkshires.">
 	<meta name="keywords" content="woodworking, design, furniture, custom, handmade, West Stockbridge, Massachusetts, Berkshire">
 	<meta name="author" content="Lily Thorne">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" href="font.css" />
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="../font.css" />
+	<link rel="stylesheet" href="../style.css" />
+	<link rel="stylesheet" href="../glightbox.min.css" />
 	<link rel="icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
 
 </head>
@@ -21,38 +22,28 @@
 	<header>
 		<nav>
 			<ul>
-				<li><a href="/about">About</a></li>
+				<li><a class="disabled" href="/about">About</a></li>
 				<li><a href="/work">Work</a></li>
 				<li><a class="disabled"  href="/commission">Commission</a></li>
-				<li><a class="disabled" href="/shop">Shop</a></li>
+				<li><a class="disabled"  href="/shop">Shop</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
-
+	
 		<h1>
 			<a href="/"><span>Lily Thorne</span> <br><span>Woodworking</span></a>
 		</h1>
 	</header>
 
-	<section id="hero">
-		<img src="assets/hero.jpg" alt="a table in the workshop" />
-				<p>
-					Fine woodworking &amp; handmade objects
-				</p>
 
-	</section>
+<section id="info">
+	<img src="../assets/bio.jpg" alt="portrait photo of Lily Thorne" />	
+	<div>
+		<!-- <h2>About</h2> -->
+		<p class="no-margin-top">Work in progress.</p>
+	</div>
+</section>
 
-	<section id="feature">
-		<div>
-		<img src="assets/ash-stained-spools.jpg" alt="ash stained spools" />
-		</div>
-		<div>
-		<img src="assets/walnut-stone-table.jpg" alt="stone and wood coffee table" />
-		</div>
-		<div>
-		<img src="assets/lg-ash-rectangle-scallop.jpg" alt="scallop cutting board" />
-		</div>
-	</section>
 
 	<section id="contact">
 		<h3>Contact</h3>
@@ -65,6 +56,15 @@
 		01266
 		</p>
 	</section>
+	<script src="../glightbox.min.js"></script>
+	<script>
+		(() => {
+			const lightbox = GLightbox({
+				touchNavigation: true,
+				loop: true
+			});
+		})();
+	</script>
 </body>
 
 </html>
