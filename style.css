@@ -1,13 +1,13 @@
 
 :root {
 	/* font */
-	--sans: "IBM Plex Sans Condensed",  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--sans: "Roboto Condensed",  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	
 	/* --serif: "Crimson Pro", Iowan Old Style, Times New Roman, Times, serif; */
-	--serif: "IBM Plex Serif", Iowan Old Style, Times New Roman, Times, serif;
+	--serif: "Merriweather",Iowan Old Style, Times New Roman, Times, serif;
 
 	/* --mono: "Courier Prime", Menlo, Consolas, Monaco, monospace; */
-	--mono: "IBM Plex Mono", Menlo, Consolas, Monaco, monospace;
+	--mono: Menlo, Consolas, Monaco, monospace;
 
 	/* z-index */
 	--z-bottom: -100;
@@ -21,7 +21,7 @@
 	--color-secondary: #2d6987;
 	--color-tertiary: #deae1f	;
 	--color-fg: #3e3929;
-	--col-width: 540px;
+	--col-width: 600px;
 	
 	/* "1" second duration */
 	--1s: 1ms;
@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-	font-family: var(--sans);
+	font-family: var(--serif);
 	font-weight: 300;
 	background: var(--color-bg);
 	color: var(--color-fg);
@@ -133,21 +133,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	line-height: 0.75;
+	line-height: 1;
 	font-weight: 200;
 	margin: 1rem auto;
-	font-size: 28px;
-	background: var(--color-fg);
-	display: inline-block;
-	padding: 8px;
-}
-
-h1 span:nth-of-type(2) {
-	font-size: 0.78em;
+	display: block;
+	padding: 1rem 0;
+	font-size: clamp(24px, 10vw, 64px);
 }
 
 h1 a {
-	color: var(--color-bg);
+	color: var(--color-fg);
+}
+
+h1 span {
+	display: inline-block;
+}
+
+h1 span:nth-of-type(1) {
+	letter-spacing: -0.05em;
+}
+
+
+h1 span:nth-of-type(2) {
+	letter-spacing: 0.35em;
+	text-indent: 0.4em;
+
 }
 
 h2 {
@@ -211,6 +221,12 @@ nav ul {
 
 nav li {
 	text-transform: uppercase;
+	font-family: var(--sans);
+	font-weight: 400;
+}
+
+nav li a {
+	text-decoration: none;
 }
 
 li .disabled {
@@ -219,23 +235,11 @@ li .disabled {
 }
 
 a {
-	text-decoration: none;
 	color: var(--color-fg);
 }
 
 
 /* HOME */
-.home h1 {
-	font-size: clamp(24px, 10vw, 64px);
-	font-weight: 200;
-	padding: 1rem 0;
-	background: none;
-	display: block;
-}
-.home h1 a {
-	color: var(--color-fg);
-}
-
 
 .home #hero img {
 	margin: 2rem auto;
@@ -320,16 +324,12 @@ a {
 /* about */
 .about #info {
 	display: flex;
-	margin-top: 4rem;
+	margin-top: 2rem;
 	gap: 2rem;
 }
 
 .about #info img {
-	max-width: 280px;
-	filter: brightness(0);
-}
-
-.about #info div {
+	width: calc(var(--col-width) / 2 - 2rem);
 }
 
 @media (max-width: 640px) {
