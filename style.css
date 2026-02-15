@@ -155,8 +155,8 @@ h1 span:nth-of-type(1) {
 
 
 h1 span:nth-of-type(2) {
-	letter-spacing: 0.35em;
-	text-indent: 0.4em;
+	letter-spacing: 0.34em;
+	text-indent: 0.45em;
 
 }
 
@@ -249,14 +249,9 @@ a {
 .home #hero p {
 	text-align: center;
 	margin: 4rem auto;
-	font-size: 32px;
-	line-height: 1;
+	font-size: 28px;
+	line-height: 1.2;
 }
-
-.home #hero img {
-	/* border-radius: 16px; */
-}
-
 
 .home #feature {
 	display: flex;
@@ -338,6 +333,14 @@ a {
 		align-items: center;
 		text-align: center;
 	}
+	
+	.home #hero p {
+		font-size: 20px;
+	}
 
+	.home #feature {
+		flex-direction: column;
+		align-items: center;
+	}
 	
 }
